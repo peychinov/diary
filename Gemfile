@@ -44,5 +44,13 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development, :test do
+  gem 'guard-coffeescript'
+  gem 'guard-sass', :require => false
+  gem 'rb-inotify', '~> 0.9'
+end
+
+gem 'html2haml'
 gem 'acts-as-taggable-on'
 gem 'select2-rails'
+gem 'slim-rails'
