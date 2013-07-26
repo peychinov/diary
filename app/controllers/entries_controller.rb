@@ -5,6 +5,7 @@ class EntriesController < ApplicationController
   # GET /entries.json
   def index
     @entries = Entry.all
+    @entry = Entry.new
   end
 
   # GET /entries/1
@@ -28,7 +29,7 @@ class EntriesController < ApplicationController
 
     respond_to do |format|
       if @entry.save
-        format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
+        format.html { redirect_to entries_url, notice: 'Entry was successfully created.' }
         format.json { render action: 'show', status: :created, location: @entry }
       else
         format.html { render action: 'new' }
