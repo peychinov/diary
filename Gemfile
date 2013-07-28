@@ -48,6 +48,7 @@ group :development, :test do
   gem 'guard-coffeescript'
   gem 'guard-sass', :require => false
   gem 'rb-inotify', '~> 0.9'
+  gem 'pry'
 end
 
 gem 'html2haml'

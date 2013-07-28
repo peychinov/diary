@@ -181,6 +181,7 @@ DEPENDENCIES
   html2haml
   jbuilder (~> 1.2)
   jquery-rails
+  pry
   rails (= 4.0.0)
   rb-inotify (~> 0.9)
   sass-rails (~> 4.0.0)
