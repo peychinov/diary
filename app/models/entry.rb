@@ -1,6 +1,8 @@
 class Entry < ActiveRecord::Base
   validates :content, :presence => true
 
+  default_scope order('created_at DESC')
+
   acts_as_taggable
 
   def self.search(params)
