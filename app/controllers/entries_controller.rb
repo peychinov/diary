@@ -16,6 +16,7 @@ class EntriesController < ApplicationController
   # GET /entries/new
   def new
     @entry = Entry.new
+    @entry.happened_on = Date.today
   end
 
   # GET /entries/1/edit
@@ -70,6 +71,6 @@ class EntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params.require(:entry).permit(:content, :tag_list)
+      params.require(:entry).permit(:content, :tag_list, :priority, :happened_on)
     end
 end
