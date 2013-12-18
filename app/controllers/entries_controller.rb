@@ -6,6 +6,7 @@ class EntriesController < ApplicationController
   def index
     @entries = Entry.search(params)
     @entry = Entry.new
+    @entry.happened_on = Date.today
   end
 
   # GET /entries/1
