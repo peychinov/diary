@@ -11,14 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131202090835) do
+ActiveRecord::Schema.define(version: 20140914142617) do
 
   create_table "entries", force: true do |t|
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "happened_on"
+    t.date     "happened_on", default: '2013-12-02'
     t.integer  "priority",    default: 3
+    t.string   "book"
+    t.integer  "chapter"
+    t.integer  "verse"
   end
 
   create_table "taggings", force: true do |t|
