@@ -23,7 +23,7 @@
   #bible_notes_fields
     .field
       = f.label :book
-      = f.select :book, Entry::BIBLE_BOOKS.unshift(nil).map{ |s| [s, s] }
+      = f.select :book, Entry::BIBLE_BOOKS.dup.unshift(nil).map{ |s| [s, s] }
     .field
       = f.label :chapter
       = f.select :chapter, (1..150).map{ |n| [n, n] }
