@@ -27,3 +27,6 @@ textarea {
     font-size: 1.8em; }
   #tag_cloud .css10 {
     font-size: 1.9em; }
+
+tr.odd {
+  background-color: #DDD; }

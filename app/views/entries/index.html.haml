@@ -17,7 +17,7 @@
       %th
   %tbody
     - @entries.each do |entry|
-      %tr
+      %tr{ class: cycle("odd", "even") }
         %td= entry.happened_on
         %td= entry.content
         %td= link_to 'Show', entry
