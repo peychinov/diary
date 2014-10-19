@@ -12,7 +12,7 @@
     = f.text_area :content, autofocus: true
   .field
     = f.label :tag_list
-    = f.text_field :tag_list
+    = f.text_field :tag_list, value: @entry.tag_names
   .field
     = f.label :priority
     = f.select :priority, Entry.priority_options_for_select
