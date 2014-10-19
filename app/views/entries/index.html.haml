@@ -10,6 +10,7 @@
 %table
   %thead
     %tr
+      %th{style: 'width: 70px'} Date
       %th Content
       %th
       %th
@@ -17,6 +18,7 @@
   %tbody
     - @entries.each do |entry|
       %tr
+        %td= entry.happened_on
         %td= entry.content
         %td= link_to 'Show', entry
         %td= link_to 'Edit', edit_entry_path(entry)
