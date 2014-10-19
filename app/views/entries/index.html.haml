@@ -11,6 +11,7 @@
   %thead
     %tr
       %th{style: 'width: 70px'} Date
+      %th Priority
       %th Content
       %th
       %th
@@ -19,6 +20,7 @@
     - @entries.each do |entry|
       %tr{ class: cycle("odd", "even") }
         %td= entry.happened_on
+        %td= entry.priority
         %td= entry.content
         %td= link_to 'Show', entry
         %td= link_to 'Edit', edit_entry_path(entry)
