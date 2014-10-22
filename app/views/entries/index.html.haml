@@ -20,8 +20,8 @@
   %tbody
     - @entries.each do |entry|
       %tr{ class: cycle("odd", "even") }
-        %td= entry.happened_on
-        %td= entry.priority
+        %td{style: 'text-align: center'}= entry.happened_on
+        %td{style: 'text-align: center'}= entry.priority
         %td
           - entry.tags.each do |tag|
             = link_to tag.name, tag_path(tag.name)
