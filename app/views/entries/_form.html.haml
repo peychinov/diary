@@ -1,38 +1,41 @@
 = form_for(@entry) do |f|
-  - if @entry.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@entry.errors.count, "error")
-        prohibited this entry from being saved:
-      %ul
-        - @entry.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :content
-    = f.text_area :content, autofocus: true
-  .field
-    = f.label :tag_list
-    = f.text_field :tag_list, value: @entry.tag_names
-  .field
-    = f.label :priority
-    = f.select :priority, Entry.priority_options_for_select
-  .field
-    = f.label :happened_on
-    = date_select :entry, :happened_on
+  %div{style: 'width: 60%; float: left;'}
+    - if @entry.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@entry.errors.count, "error")
+          prohibited this entry from being saved:
+        %ul
+          - @entry.errors.full_messages.each do |msg|
+            %li= msg
+    .field
+      = f.label :content
+      = f.text_area :content, autofocus: true
 
-  #bible_notes_fields
+  %div{style: 'width: 30%; float: left;'}
     .field
-      = f.label :book
-      = f.select :book, Entry::BIBLE_BOOKS.dup.unshift(nil).map{ |s| [s, s] }
+      = f.label :tag_list
+      = f.text_field :tag_list, value: @entry.tag_names
     .field
-      = f.label :chapter
-      = f.select :chapter, (1..150).map{ |n| [n, n] }
+      = f.label :priority
+      = f.select :priority, Entry.priority_options_for_select
     .field
-      = f.label :verse
-      = f.select :verse, (1..150).map{ |n| [n, n] }
+      = f.label :happened_on
+      = date_select :entry, :happened_on
 
-  .actions
-    = f.submit
+    #bible_notes_fields
+      .field
+        = f.label :book
+        = f.select :book, Entry::BIBLE_BOOKS.dup.unshift(nil).map{ |s| [s, s] }
+      .field
+        = f.label :chapter
+        = f.select :chapter, (1..150).map{ |n| [n, n] }
+      .field
+        = f.label :verse
+        = f.select :verse, (1..150).map{ |n| [n, n] }
+
+    .actions
+      = f.submit
 
 - all_tags = ActsAsTaggableOn::Tag.all.map(&:name)
 
