@@ -5,8 +5,7 @@ class EntriesController < ApplicationController
   # GET /entries.json
   def index
     @entries = Entry.search(params)
-    @entry = Entry.new
-    @entry.happened_on = Date.today
+    @entry = Entry.new(happened_on: Date.today)
   end
 
   # GET /entries/1
