@@ -1,7 +1,7 @@
 class Entry < ActiveRecord::Base
   validates :content, :presence => true
 
-  default_scope { order('happened_on DESC') }
+  default_scope { order('happened_on DESC, created_at DESC') }
 
   acts_as_taggable
 
