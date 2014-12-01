@@ -5,6 +5,8 @@
   = render partial: '/tag_cloud'
 
 %div{style: 'clear: both; margin-top: 2em;'}
+  = paginate @entries
+
   %table
     %thead
       %tr
@@ -27,3 +29,5 @@
           %td= link_to 'Show', entry
           %td= link_to 'Edit', edit_entry_path(entry)
           %td= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }
+
+  = paginate @entries

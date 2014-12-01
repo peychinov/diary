@@ -59,3 +59,5 @@ gem 'acts-as-taggable-on'
 gem 'select2-rails'
 gem 'haml-rails'
 gem 'tire'
+
+gem 'kaminari'
