@@ -4,11 +4,13 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
+    page = params[:page] || 1
+
     @entries =
       if params[:tag].present?
-        Entry.tagged_with(params[:tag])
+        Entry.tagged_with(params[:tag]).page(page)
       else
-        Entry.page(params[:page] || 1)
+        Entry.page(page)
       end
     @entry = Entry.new(happened_on: Date.today)
   end
