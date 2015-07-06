@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', github: 'rails/rails'
 
-gem 'thin'
-
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
@@ -18,7 +16,7 @@ gem 'uglifier'
 gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
