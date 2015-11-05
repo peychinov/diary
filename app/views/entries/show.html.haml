@@ -1,7 +1,9 @@
 %p#notice= notice
+
+%strong Content:
 %p
-  %strong Content:
-  = @entry.content
+  = raw @entry.content.gsub("\n", '<br>')
+
 = link_to 'Edit', edit_entry_path(@entry)
 |
 \#{link_to 'Back', entries_path}
