@@ -27,7 +27,7 @@
               = link_to tag.name, tag_path(tag.name)
           %td
             - if entry.content
-              = raw entry.content.first(200).gsub("\n", '<br>')
+              = raw entry.content.gsub("\n", '<br>')
           %td= link_to 'Show', entry
           %td= link_to 'Edit', edit_entry_path(entry)
           %td= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }
