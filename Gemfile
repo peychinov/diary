@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', github: 'rails/rails'
+gem 'rails'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0.0.beta1'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
@@ -25,7 +25,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.1.3'
+gem 'jbuilder'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -47,9 +47,7 @@ end
 group :development, :test do
   gem 'guard-coffeescript'
   gem 'guard-sass', :require => false
-  gem 'rb-inotify', '~> 0.9'
   gem 'pry'
-  gem 'web-console', '~> 2.0.0.beta3'
 end
 
 gem 'html2haml'
