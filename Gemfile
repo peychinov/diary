@@ -41,13 +41,11 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
 group :development, :test do
   gem 'guard-coffeescript'
   gem 'guard-sass', :require => false
   gem 'pry'
+  gem 'byebug'
 end
 
 gem 'html2haml'
