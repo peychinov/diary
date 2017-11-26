@@ -15,7 +15,7 @@
   %div{style: 'width: 30%; float: left;'}
     .field
       = f.label :tag_list
-      = f.text_field :tag_list, value: @entry.tag_names
+      = f.text_field :tag_list, value: @entry.tag_names, multiple: 'multiple'
     .field
       = f.label :priority
       = f.select :priority, Entry.priority_options_for_select
@@ -42,7 +42,8 @@
 :javascript
   $("#entry_tag_list").select2({
     width: 'resolve',
-    tags: #{all_tags},
+    data: #{all_tags},
+    tags: true,
     tokenSeparators: [","]
   });
 
