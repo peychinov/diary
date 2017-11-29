@@ -3,3 +3,4 @@
 #tag_cloud
   - tag_cloud Entry.tag_counts.order(:name), %w[css1 css2 css3 css4 css5 css6 css7 css8 css9 css10] do |tag, css_class|
     = link_to tag.name, tag_path(tag.name), class: css_class
+    &nbsp
