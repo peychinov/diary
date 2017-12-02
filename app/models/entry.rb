@@ -1,5 +1,6 @@
 class Entry < ActiveRecord::Base
   validates :content, :presence => true
+  paginates_per 10
 
   default_scope { order('happened_on DESC, created_at DESC') }
 
