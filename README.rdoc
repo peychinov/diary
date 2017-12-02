@@ -1,1 +1,1 @@
-A simple diary app.
+A lightweight diary app with tagging functionality and the ability to reference Bible verses
