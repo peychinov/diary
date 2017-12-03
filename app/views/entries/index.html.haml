@@ -14,9 +14,7 @@
         %th Priority
         %th Tags
         %th Content
-        %th
-        %th
-        %th
+        %th Actions
     %tbody
       - @entries.each do |entry|
         %tr{ class: cycle("odd", "even") }
@@ -28,8 +26,11 @@
           %td
             - if entry.content
               = raw entry.content.gsub("\n", '<br>')
-          %td= link_to 'Show', entry
-          %td= link_to 'Edit', edit_entry_path(entry)
-          %td= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }
+          %td
+            = link_to 'Show', entry
+            %br
+            = link_to 'Edit', edit_entry_path(entry)
+            %br
+            = link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }
 
   = paginate @entries
