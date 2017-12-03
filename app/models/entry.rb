@@ -87,4 +87,7 @@ class Entry < ActiveRecord::Base
     priority_options.map{ |p| [p,p] }
   end
 
+  def bible_verse
+    book ? "#{book} #{chapter}:#{verse}" : ''
+  end
 end

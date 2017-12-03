@@ -13,6 +13,7 @@
         %th{style: 'width: 60px'} Date
         %th Priority
         %th Tags
+        %th Bible Verse
         %th Content
         %th Actions
     %tbody
@@ -23,6 +24,7 @@
           %td
             - entry.tags.each do |tag|
               = link_to tag.name, tag_path(tag.name)
+          %td= entry.bible_verse
           %td
             - if entry.content
               = raw entry.content.gsub("\n", '<br>')
