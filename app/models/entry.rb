@@ -88,6 +88,6 @@ class Entry < ActiveRecord::Base
   end
 
   def bible_verse
-    book ? "#{book} #{chapter}:#{verse}" : ''
+    book.present? ? "#{book} #{chapter}:#{verse}" : ''
   end
 end
