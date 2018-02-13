@@ -54,4 +54,3 @@ gem 'haml-rails'
 gem 'tire'
 
 gem 'kaminari'
-gem 'react-rails'
