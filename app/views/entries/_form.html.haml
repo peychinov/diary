@@ -42,7 +42,7 @@
 :javascript
   $("#entry_tag_list").select2({
     width: 'resolve',
-    data: #{all_tags},
+    data: #{all_tags.to_json.html_safe},
     tags: true,
     tokenSeparators: [","]
   });
