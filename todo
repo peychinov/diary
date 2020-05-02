@@ -1,0 +1,28 @@
+DONE
+  UI
+    alternate background
+  Functionality
+    tagcloud
+  bugs
+    when editing it shows 2 tags as one
+
+TODO
+  add vue.js stuff
+  add the day-of-week to the thing
+
+  Dev
+    Slim
+
+  UI
+    semantic UI
+    narrower cloud
+
+  Functionality
+    pagination
+    most popular tags first
+    searching by keyword
+    inplaceedit
+    delete tags
+
+  Bugs
+
