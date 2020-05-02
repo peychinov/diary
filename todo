@@ -7,6 +7,9 @@ DONE
     when editing it shows 2 tags as one
 
 TODO
+  Bugs
+    I can't create new tags from the UI
+
   add vue.js stuff
   add the day-of-week to the thing
 
@@ -24,5 +27,4 @@ TODO
     inplaceedit
     delete tags
 
-  Bugs
 
