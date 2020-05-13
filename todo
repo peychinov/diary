@@ -7,6 +7,7 @@ DONE
     when editing it shows 2 tags as one
 
 TODO
+  add an Are you sure when you click away from writing an entry.
   Bugs
     I can't create new tags from the UI
 
@@ -24,7 +25,8 @@ TODO
     pagination
     most popular tags first
     searching by keyword
-    inplaceedit
+    inplace edit
+      date
     delete tags
 
 

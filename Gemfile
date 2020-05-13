@@ -49,7 +49,7 @@ group :development, :test do
 end
 
 gem 'html2haml'
-gem 'acts-as-taggable-on', '~> 5.0'
+gem 'acts-as-taggable-on'
 gem 'select2-rails'
 gem 'haml-rails'
 gem 'tire'
