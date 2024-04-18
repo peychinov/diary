@@ -4,19 +4,16 @@ source 'https://rubygems.org'
 gem 'rails'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 
 # Use SCSS for stylesheets
-gem 'sass-rails'
+gem 'sassc'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -42,8 +39,6 @@ end
 # gem 'capistrano', group: :development
 
 group :development, :test do
-  gem 'guard-coffeescript'
-  gem 'guard-sass', :require => false
   gem 'pry'
   gem 'byebug'
 end
@@ -52,6 +47,4 @@ gem 'html2haml'
 gem 'acts-as-taggable-on'
 gem 'select2-rails'
 gem 'haml-rails'
-gem 'tire'
-
 gem 'kaminari'
